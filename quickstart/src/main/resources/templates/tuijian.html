@@ -1,0 +1,168 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>应用推荐</title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css">
+    <style>
+        .main{
+            float: left;
+            margin-left: 150px;
+            width: 900px;
+        }
+        .menu{
+            float: right;
+            margin-right: 80px;
+        }
+        .ce div {
+            margin-bottom: 40px;
+            width: 300px;
+            position: relative;
+        }
+        .menu div div img{
+            height: 200px;
+            width: 200px;
+        }
+        .avatar {
+            width: 50px;;
+            height: 50px;
+        }
+        .picture{
+            height: 200px;
+            width: 200px;
+            margin-bottom: -5px;
+        }
+        .main div {
+            margin: 20px;
+        }
+        h5{
+            line-height: 1.5em;
+        }
+        .message{
+            margin-left: 60px;
+            margin-top: -40px;
+        }
+        .date {
+            margin-left: 60px;
+            margin-top: -10px;
+        }
+        .first {
+            margin: 20px;
+            border-color: burlywood;
+            border-width: 1px;
+        }
+        .head {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .header img{
+            margin-left: 30px;
+        }
+        .mingzi{
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin-top: -40px;
+        }
+        .tou{
+            color: white;
+            margin-left: 200px;
+        }
+        .rpic {
+            width: 300px;
+            opacity:0.6;
+        }
+        .header2 {
+            margin-top: -20px;
+        }
+        .header3 h5{
+            font-weight: bold;
+            margin-right: 35px;
+        }
+        .word {
+            position: absolute;
+            z-index: 2;
+            margin-left: -180px;
+            margin-top: 100px;
+            font-size: 18px;
+            color: white;
+        }
+        .btn1{
+            float: right;
+            margin-top: -40px;
+            margin-right: 200px;
+            background-color: black;
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+        }
+        .like {
+            margin-bottom: -100px;
+            margin-left: 50px;
+        }
+        .like1 {
+            margin-left: 90px;
+        }
+        .good {
+            margin-bottom: -100px;
+            margin-left: 50px;
+        }
+        .good1 {
+            margin-left: 90px;
+        }
+    </style>
+</head>
+<body>
+<div class="contain">
+    <div class="navbar navbar-inverse header">
+        <h3 class="col-md-offset-1 tou">不做多数派</h3>
+        <h3 class="mingzi">#应用推荐</h3>
+        <button class="btn1" value="登录">登录</button>
+    </div>
+    <div class="navbar navbar-default header2">
+        <div class="container header3">
+            <h5 class="col-md-1">正版软件</h5>
+            <h5 class="col-md-1">付费栏目</h5>
+            <h5 class="col-md-1">Matrix</h5>
+            <h5 class="col-md-1">专题广场</h5>
+            <h5 class="col-md-1">热门文章</h5>
+            <h5 class="col-md-1">应用推荐</h5>
+            <h5 class="col-md-1">生活方式</h5>
+            <h5 class="col-md-1">新玩意</h5>
+        </div>
+    </div>
+    <div class="container main">
+        <div class="row first thumbnail" th:each="card:${cardList}">
+                <div class="col-md-6 col-md-offset-1" >
+                    <img th:src="${card.avatar}" class="img-circle avatar">
+                    <p class="message" th:text="${card.name}"></p>
+                    <p class="date" th:text="${card.lastuploadtime}"></p>
+                    <h3 th:text="${card.title}"></h3>
+                    <h5 th:text="${card.intro}"></h5>
+                </div>
+                <div class="col-md-2 col-md-offset-3">
+                    <img th:src="${card.pic}" class="picture">
+                </div>
+                <div class="col-md-1 col-md-offset-1 fuzhu">
+                    <img th:src="@{喜欢.png}" class="like">
+                    <p th:text="${card.like}" class="like1"></p>
+                </div>
+                <div class="col-md-1 col-md-offset-1 fuzhu2">
+                    <img th:src="@{点赞.png}" class="good">
+                    <p th:text="${card.good}" class="good1"></p>
+                </div>
+        </div>
+    </div>
+    <div class="menu">
+        <p class="head">推荐专题</p>
+        <div class="row ce" th:each="recommand:${recommandList}">
+                <div class="col-md-2 cebian">
+                    <img th:src="${recommand.pic}" class="rpic">
+                    <span class="word" th:text="${recommand.name}"></span>
+                </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-CN">
+<head>
+    <!--<script type="text/javascript" src="webjars/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<link rel="stylesheet" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css">-->
+    <script type="text/javascript" th:src="@{https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js}"></script>
+    <link th:href="@{https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <title>书籍详情</title>
+</head>
+<style>
+    .h4 {
+        font-weight: bold;
+    }
+    .container {
+        background-color: aliceblue;
+    }
+</style>
+<body>
+<div class="container">
+    <h3>Spring Data JPA练习 </h3>
+    <legend>
+        <strong>书籍详情</strong>
+    </legend>
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <h4 th:text="${book.name}"></h4>
+            <p th:text="${book.author}"></p>
+            <img th:src="${book.pic}" >
+            <p th:text="${book.intro}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
