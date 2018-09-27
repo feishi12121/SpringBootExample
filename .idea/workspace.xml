@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d5db515-a285-4d41-aaef-d3a35220520b" name="Default" comment="modify md file">
-      <change afterPath="$PROJECT_DIR$/spring-data-jpa/src/main/java/com/example/springdatajpa/dao/SysUserRespository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-data-jpa/src/main/java/com/example/springdatajpa/entity/SysUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-data-jpa/src/test/java/com/example/springdatajpa/dao/SysUserRespositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1e4cb1a2-dcb2-4d39-a524-2b967d89ad6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1e4cb1a2-dcb2-4d39-a524-2b967d89ad6e.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="6d5db515-a285-4d41-aaef-d3a35220520b" name="Default" comment="add one more Spring-data-jpa project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/quickstart/target/" />
@@ -100,7 +95,7 @@
           <entry key="java" value="1922" />
           <entry key="md" value="75" />
           <entry key="properties" value="492" />
-          <entry key="txt" value="168" />
+          <entry key="txt" value="217" />
           <entry key="xml" value="17" />
         </counts>
       </usages-collector>
@@ -109,7 +104,7 @@
           <entry key="HTML" value="462" />
           <entry key="JAVA" value="1922" />
           <entry key="Markdown" value="75" />
-          <entry key="PLAIN_TEXT" value="175" />
+          <entry key="PLAIN_TEXT" value="224" />
           <entry key="Properties" value="492" />
           <entry key="Scratch" value="481" />
           <entry key="XML" value="17" />
@@ -586,7 +581,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538013657230" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538014748690" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -637,7 +632,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SysUserRespositoryTest.findByAccount">
+  <component name="RunManager" selected="Spring Boot.SpringDataJpaApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -802,7 +797,7 @@
       <workItem from="1537435497937" duration="9261000" />
       <workItem from="1537583765451" duration="2938000" />
       <workItem from="1537695436821" duration="3643000" />
-      <workItem from="1538005808139" duration="6219000" />
+      <workItem from="1538005808139" duration="7046000" />
     </task>
     <task id="LOCAL-00001" summary="create empty project and quickstart module">
       <created>1537151139339</created>
@@ -853,7 +848,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537175151063</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add one more Spring-data-jpa project">
+      <created>1538014006160</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1538014006160</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -889,7 +891,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67217000" />
+    <option name="totallyTimeSpent" value="68044000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -902,7 +904,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.2727882" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.23190348" />
@@ -920,7 +921,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.3286119" />
@@ -955,7 +956,8 @@
     <MESSAGE value="add CardControllerTest" />
     <MESSAGE value="add Project sspai" />
     <MESSAGE value="modify md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify md file" />
+    <MESSAGE value="add one more Spring-data-jpa project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add one more Spring-data-jpa project" />
   </component>
   <component name="editorHistoryManager">
     <entry file="das://510d456a-caf1-4a11-a648-7e830cdd97b2/schema/springboot_test/table/my_user" />
