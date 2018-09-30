@@ -8,4 +8,5 @@ import java.util.List;
 public interface AlbumService {
     List<Album> getAll();
     List<Album> findHotAlbum();
+    Album findByAlbumTitle(String albumTitle);
 }

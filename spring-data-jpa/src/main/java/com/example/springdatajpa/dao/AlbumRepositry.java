@@ -11,4 +11,5 @@ import java.util.List;
 public interface AlbumRepositry extends JpaRepository<Album,Integer> {
     @Query("from Album a  order by a.likes desc ")
     List<Album> findHotAlbum();
+    Album findByAlbumTitle(String albumTitle);
 }

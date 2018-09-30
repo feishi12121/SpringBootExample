@@ -2,10 +2,7 @@ package com.example.springdatajpa.controller;
 
 import com.example.springdatajpa.entity.Album;
 import com.example.springdatajpa.service.AlbumService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.AbstractList;
@@ -27,4 +24,7 @@ public class AlbumController {
     public List<Album> findHotAlbum(){
         return albumService.findHotAlbum();
     }
+
+    @GetMapping("/all/{name}")
+    public Album findByAlbumTitle(@RequestParam String albumName){return albumService.findByAlbumTitle(albumName);}
 }

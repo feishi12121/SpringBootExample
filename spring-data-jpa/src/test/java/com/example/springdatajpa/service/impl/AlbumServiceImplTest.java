@@ -1,5 +1,6 @@
-package com.example.springdatajpa.dao;
+package com.example.springdatajpa.service.impl;
 
+import com.example.springdatajpa.dao.AlbumRepositry;
 import com.example.springdatajpa.entity.Album;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +16,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class AlbumRepositryTest {
+public class AlbumServiceImplTest {
     @Resource
     private AlbumRepositry albumRepositry;
 
@@ -39,8 +40,20 @@ public class AlbumRepositryTest {
     }
 
     @Test
+    public void getAll() {
+        List<Album> albumList = albumRepositry.findAll();
+        albumList.forEach(album -> System.out.println(albumList));
+    }
+
+    @Test
     public void findHotAlbum() {
         List<Album> albums = albumRepositry.findHotAlbum();
         albums.forEach(album -> System.out.println(album));
+    }
+
+    @Test
+    public void findByAlbumTitle() {
+        Album album = albumRepositry.findByAlbumTitle("红枫");
+        System.out.println(album);
     }
 }

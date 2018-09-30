@@ -830,136 +830,174 @@
     <table id="209" parent="7" name="hibernate_sequence">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="210" parent="7" name="student">
+    <table id="210" parent="7" name="photo">
       <Engine>MyISAM</Engine>
     </table>
-    <table id="211" parent="7" name="sys_user">
+    <table id="211" parent="7" name="student">
       <Engine>MyISAM</Engine>
     </table>
-    <column id="212" parent="207" name="id">
+    <table id="212" parent="7" name="sys_user">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="213" parent="207" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="213" parent="207" name="album_cover">
+    <column id="214" parent="207" name="album_cover">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="214" parent="207" name="album_description">
+    <column id="215" parent="207" name="album_description">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="215" parent="207" name="album_title">
+    <column id="216" parent="207" name="album_title">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="216" parent="207" name="likes">
+    <column id="217" parent="207" name="likes">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="217" parent="207" name="PRIMARY">
+    <key id="218" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="218" parent="208" name="id">
+    <column id="219" parent="208" name="id">
       <Position>1</Position>
       <DataType>int(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="219" parent="208" name="author">
+    <column id="220" parent="208" name="author">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="220" parent="208" name="intro">
+    <column id="221" parent="208" name="intro">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="221" parent="208" name="name">
+    <column id="222" parent="208" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="222" parent="208" name="pic">
+    <column id="223" parent="208" name="pic">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="223" parent="208" name="price">
+    <column id="224" parent="208" name="price">
       <Position>6</Position>
       <DataType>double|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="224" parent="208" name="PRIMARY">
+    <key id="225" parent="208" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="225" parent="209" name="next_val">
+    <column id="226" parent="209" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="226" parent="210" name="id">
+    <column id="227" parent="210" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="227" parent="210" name="user_age">
+    <column id="228" parent="210" name="photo_description">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="228" parent="210" name="user_name">
+    <column id="229" parent="210" name="photo_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="229" parent="210" name="PRIMARY">
+    <column id="230" parent="210" name="photo_url">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="231" parent="210" name="album_id">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="232" parent="210" name="FKpy64km2p72eoy5rwh31ria0vx">
+      <ColNames>album_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="233" parent="210" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="230" parent="211" name="id">
+    <column id="234" parent="211" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="235" parent="211" name="user_age">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="236" parent="211" name="user_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="237" parent="211" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="238" parent="212" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="211" name="account">
+    <column id="239" parent="212" name="account">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="211" name="fans">
+    <column id="240" parent="212" name="fans">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="211" name="nickname">
+    <column id="241" parent="212" name="nickname">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="211" name="password">
+    <column id="242" parent="212" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="235" parent="211" name="PRIMARY">
+    <key id="243" parent="212" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

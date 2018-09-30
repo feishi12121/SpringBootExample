@@ -20,4 +20,10 @@ public class AlbumServiceImpl implements AlbumService {
     public List<Album> findHotAlbum() {
         return albumRepositry.findHotAlbum();
     }
+
+    @Override
+    public Album findByAlbumTitle(String albumTitle) {
+        return albumRepositry.findByAlbumTitle(albumTitle);
+    }
+
 }
