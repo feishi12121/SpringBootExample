@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket练习</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+    .radio-area{
+        width: 500px;
+        height: 500px;
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        margin: 0 auto;
+    }
+    .mes {
+        width: 500px;
+        height: 30px;
+        margin: 20px auto;
+    }
+    .input-box {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        height: 30px;
+        width: 400px;
+        float: left;
+    }
+    .send {
+        float: right;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+</style>
+<body>
+<h2>客户端</h2>
+<div class="radio-area" id="show">
+
+</div>
+<div class="mes">
+    <input class="input-box" id="input-box">
+    <button value="发送" class="send" onclick="sendMes()" id="btn">发送</button>
+</div>
+<script src="../js/jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var socket;
+    var message = document.getElementById("input-box");
+    var btn_send = document.getElementById("btn");
+    var show_box = document.getElementById("show");
+    if (typeof(WebSocket) == "undefined") {
+        console.log("您的浏览器不支持WebSocket");
+    } else {
+        console.log("您的浏览器支持WebSocket");
+
+        //实现化WebSocket对象，指定要连接的服务器地址与端口建立连接
+        socket = new WebSocket("ws://localhost:8080/websocket");
+
+        //打开事件
+        socket.onopen = function () {
+            console.log("Socket已打开");
+            btn_send.onclick = function () {
+                console.log(message);
+                //下面这句话是往服务器发送消息
+                socket.send("这是来自客户端的消息:" + message.value);
+            };
+        };
+
+        //获得消息事件
+        socket.onmessage = function (msg) {
+            var li_eme = document.createElement("li");
+            li_eme.innerHTML = msg.data;
+            show_box.appendChild(li_eme);
+            //控制台打印消息
+            console.log(msg.data);
+        };
+
+        //关闭事件
+        socket.onclose = function () {
+            console.log("Socket已关闭");
+        };
+
+        //发生了错误事件
+        socket.onerror = function () {
+            alert("Socket发生了错误");
+        }
+    }
+</script>
+</body>
+
+</html>

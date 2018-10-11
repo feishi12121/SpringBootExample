@@ -5,6 +5,8 @@
       <list>
         <option value="$PROJECT_DIR$/quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/spring-data-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/timing/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-websocket/pom.xml" />
       </list>
     </option>
   </component>

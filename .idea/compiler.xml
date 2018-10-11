@@ -7,12 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="quickstart" />
+        <module name="spring-boot-websocket" />
         <module name="spring-data-jpa" />
+        <module name="timing" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="quickstart" target="1.8" />
+      <module name="spring-boot-websocket" target="1.8" />
       <module name="spring-data-jpa" target="1.8" />
+      <module name="timing" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
