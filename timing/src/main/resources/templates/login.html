@@ -1,0 +1,108 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>-->
+    <!--<link type="text/css" rel="stylesheet" href="login.css"/>-->
+    <title>Title</title>
+    <style>
+        *{padding: 0;margin: 0;} /* 清除浮动 */
+        body {
+            font-family:"Microsoft YaHei";
+            background:#EBEBEB;
+            font-weight: 300;
+            font-size: 15px;
+            color: #333;
+            overflow: hidden;
+        }
+        a {text-decoration: none; color:#000;}
+        a:hover{color:#F87982;} /*home*/
+        #home { /*logint界面*/
+            padding-top:100px;
+        }
+        #login{
+            padding:20px 30px 30px;
+            width:300px;
+            background:#FFF;
+            margin:auto;
+            border-radius: 3px;
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+        }
+        #login h3{
+            font-size:18px;
+            line-height:25px;
+            font-weight:300;
+            letter-spacing:3px;
+            margin-bottom:20px;
+            color:#C8C8C8;
+            text-align:center;}
+        #login label{
+            color:#C8C8C8;
+            display:block;
+            height:35px;
+            padding:0 10px;
+            font-size:12px;
+            line-height:35px;
+            background:#EBEBEB;
+            margin-bottom:10px;
+            position:relative;}
+        #login label input{
+            font:13px/20px "Microsoft YaHei";
+            background:none;  height:20px;
+            border:none; margin:7px 0 0 10px;
+            width:245px;outline:none ;
+            letter-spacing:normal;
+            z-index:1; position:relative;
+        }
+        #login label  span{
+            display:block;
+            height:35px;
+            color:#F30;
+            width:100px;
+            position:absolute;
+            top:0;
+            left:190px;
+            text-align:right;
+            padding:0 10px 0 0;
+            z-index:0;
+            display:none;
+        }
+        #login #button{
+            font-family:"Microsoft YaHei";
+            cursor:pointer;
+            width:300px;
+            height:35px;
+            background:#FE4E5B;
+            border:none;
+            font-size:14px;
+            line-height:30px;
+            letter-spacing:3px;
+            color:#FFF;
+            position:relative;
+            margin-top:10px;
+            -moz-transition: all 0.2s ease-in;
+            -webkit-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;}
+        #login #button:hover{ background:#F87982; color:#000;}
+        .avator{
+            display:block;
+            margin:0 auto 20px;
+            border-radius:50%;
+        }
+    </style>
+</head>
+<body>
+<div id="home">
+    <form id="login" action="/sporter/list" method="get" class="current1">
+        <h3>用户登入</h3>
+        <img class="avator" src="img/avatar.jpg" width="96" height="96"/>
+        <label>账号<input type="text" name="account" style="width:215px;" />
+            <span>账号为空</span></label>
+        <label>密码<input type="password" name="password"  />
+            <span>密码为空</span></label>
+        <input type="submit" id="button"></input>
+    </form>
+</div>
+</body>
+</html>
